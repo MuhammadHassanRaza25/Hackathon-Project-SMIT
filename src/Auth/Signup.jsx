@@ -36,7 +36,7 @@ function Signup(){
          <div className="pb-5">
           <button className="signupBtn bg-blue-600 hover:bg-blue-400 mt-5 py-2.5 text-white font-bold text-lg rounded-lg"
           >Signup</button>
-          <p className="flex justify-center gap-1 mt-3 font-medium text-gray-500">Already have an account? <Link to={"/login"} className="text-blue-500 hover:underline">Login</Link></p>
+          <p className="flex justify-center gap-1 mt-8 font-medium text-gray-500">Already have an account? <Link to={"/login"} className="text-blue-500 hover:underline">Login</Link></p>
          </div>
           
           {/* <hr className="mt-6 mb-1.5 border border-gray-300 " /> */}
