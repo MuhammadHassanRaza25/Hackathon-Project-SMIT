@@ -10,8 +10,8 @@ function Login(){
     return(
         <>
          <div className="bg-gray-50 flex items-center justify-center h-screen w-full">
-           <div className="loginForm bg-white border border-gray-300 rounded-xl py-12 p-5">
-            <h1 className="flex justify-center font-semibold text-4xl pb-10">Login</h1>
+           <div className="loginForm bg-white border border-gray-300 rounded-xl p-5 py-6">
+            <h1 className="flex justify-center font-semibold text-4xl pt-5 pb-10">Login</h1>
             
             {/* inputs ⬇ */}
             <div className="mb-5 mt-8">
