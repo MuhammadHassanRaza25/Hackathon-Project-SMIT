@@ -1,0 +1,1 @@
+BASE_URL="https://smit-hackathon-backend-repo.onrender.com"
