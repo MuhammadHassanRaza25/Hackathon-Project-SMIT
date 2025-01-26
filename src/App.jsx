@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-// import Home from "./Pages/Home"
+import Home from "./Pages/Home"
 import Login from "./Auth/Login"
 import Signup from "./Auth/Signup"
 import User from './user/User'
@@ -16,8 +16,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-           {/* <Route path="/" element={<Home/>}></Route> */}
-           <Route path="/" element={<User/>}></Route>
+           <Route path="/" element={<Home/>}></Route>
+           <Route path="/user" element={<User/>}></Route>
            <Route path="/login" element={<Login/>}></Route>
            <Route path="/signup" element={<Signup/>}></Route>
            <Route path="/weddingloans" element={<WeddingLoans/>}></Route>
