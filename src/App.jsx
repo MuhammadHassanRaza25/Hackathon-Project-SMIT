@@ -3,7 +3,7 @@ import './App.css'
 import Home from "./Pages/Home"
 import Login from "./Auth/Login"
 import Signup from "./Auth/Signup"
-import User from './user/user'
+import User from './user/User'
 import WeddingLoans from './user/userComponents/weddingLoans'
 import ConstructionLoans from './user/userComponents/ConstructionLoans'
 import BussinessLoans from './user/userComponents/BussinessLoans'

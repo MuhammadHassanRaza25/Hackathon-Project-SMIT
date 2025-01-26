@@ -26,6 +26,7 @@ function ConstructionLoans(){
                <h1 className="text-center text-blue-600 text-2xl font-bold">Home Construction Loan</h1>
                <button onClick={showModal} className="cursor-pointer bg-blue-600 text-white font-semibold rounded-md py-1.5 px-6 text-lg">Get Loan</button>
             </div>
+            
 
             <Modal title="Home Construction Loan" onCancel={handleCancel} open={isModalOpen} onOk={handleOk}>
               <div className="flex gap-3 pt-5 justify-between">
