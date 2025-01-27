@@ -5,8 +5,8 @@ function HeroSection(){
 
     return(
         <>
-        <section className="pt-5 bg-gray-50 text-gray-600 body-font">
-         <div className="contentDiv mx-auto flex px-18 pt-36 pb-36 md:flex-row flex-col items-center">
+        <section className="shadow lg:mx-10 md:mx-10 mx-3 mt-20 py-16 bg-white rounded-xl text-gray-600 body-font">
+         <div className="contentDiv mx-auto flex px-10 md:flex-row flex-col items-center">
               
               <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0" data-aos="fade-up">
                  <h1 className="title-font text-green-500 sm:text-3xl text-3xl mb-4 font-bold">
@@ -22,7 +22,7 @@ function HeroSection(){
                   </div>
               </div>
 
-              <div className="lg:w-[36vw] md:w-1/2 w-[80vw]">
+              <div className="lg:w-[36vw] md:w-1/2 w-[75vw]">
                  <img
                    className="object-cover object-center rounded-md"
                    alt="hero image"

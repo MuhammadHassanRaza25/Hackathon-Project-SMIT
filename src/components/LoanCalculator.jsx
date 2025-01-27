@@ -10,7 +10,7 @@ const loanCategories = [
   {
     name: "Home Construction Loans",
     subcategories: ["Structure", "Finishing", "Loan"],
-    maxLoan: 1000000,
+    maxLoan: 120000,
     period: 5,
   },
   {
@@ -21,13 +21,13 @@ const loanCategories = [
       "Shop Assets",
       "Shop Machinery",
     ],
-    maxLoan: 1000000,
+    maxLoan: 700000,
     period: 5,
   },
   {
     name: "Education Loans",
     subcategories: ["University Fees", "Child Fees Loan"],
-    maxLoan: 1000000,
+    maxLoan: 900000,
     period: 4,
   },
 ];
@@ -72,8 +72,8 @@ function LoanCalculator() {
   };
 
   return (
-    <div className="pt-24 py-16">
-       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="shadow rounded-xl mt-24 py-16 lg:mx-10 md:mx-10 mx-3 bg-white">
+       <div className="w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="shadow text-3xl text-white bg-blue-500 font-bold text-center py-3 mb-8 rounded-lg">
               Loan Calculator
             </h2>
@@ -86,7 +86,7 @@ function LoanCalculator() {
                  onChange={(e) => setCategory(e.target.value)}
                >
                  <option value="" disabled>
-                   Select category
+                   Select Loan category
                  </option>
                  {loanCategories.map((cat, index) => (
                    <option key={index} value={cat.name}>
@@ -100,7 +100,7 @@ function LoanCalculator() {
                  onChange={(e) => setSubcategory(e.target.value)}
                >
                  <option value="" disabled>
-                   Select subcategory
+                   Select Loan subcategory
                  </option>
                  {category &&
                    loanCategories

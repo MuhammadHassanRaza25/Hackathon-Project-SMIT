@@ -28,7 +28,7 @@ function Footer(){
                       <Link to={'/'}><a className="font-medium text-gray-800 hover:text-blue-500">Contact Us</a></Link>
                     </li>
                     <li className="mb-2">
-                     <Link to={'/'}><a className="font-medium text-gray-800 hover:text-blue-500">Apply For Loan</a></Link>
+                     <Link to={'/user'}><a className="font-medium text-gray-800 hover:text-blue-500">Apply For Loan</a></Link>
                     </li>
                   </nav>
                 </div>
