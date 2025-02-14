@@ -12,7 +12,7 @@ function Header() {
           alt="Logo" 
           className="sm:w-32"
         />
-        <h1 className="font-bold text-xl text-gray-800 hidden sm:block"><span className='text-green-500'>Saylani </span>Microfinance App</h1>
+        <h1 className="font-bold text-xl text-gray-800 hidden sm:block">Saylani Microfinance App</h1>
       </div>
 
       <div className='flex gap-3'>

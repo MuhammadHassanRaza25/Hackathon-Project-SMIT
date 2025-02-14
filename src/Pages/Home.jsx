@@ -1,3 +1,4 @@
+import FAQsSections from "../components/FAQsSection";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
@@ -15,6 +16,9 @@ function Home(){
              
            {/* Loan Calculator */}
              <LoanCalculator/>
+
+            {/* FAQs */}
+             <FAQsSections/>
 
             {/* Footer */}
             <Footer/>

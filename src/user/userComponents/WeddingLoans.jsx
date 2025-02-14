@@ -184,7 +184,7 @@
 
 import { useState } from "react";
 import UserLayout from "./UserLayout";
-import { Modal, Table, Button } from 'antd';
+import { Modal, Table, Button, Spin } from 'antd';
 import { BASE_URL } from "../../utils/baseurl";
 import { message } from "antd";
 
@@ -196,41 +196,14 @@ function WeddingLoans() {
     maxLoan: '',
     loanPeriod: ''
   });
-  
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [subcategory, setSubcategory] = useState("")
-  const [maximumLoan, setMaximumLoan] = useState("")
-  const [loanPeriod, setLoanPeriod] = useState("")
 
-  let postLoanRequest = async () => {
-    try {
-      let postReq = await fetch(
-        `${BASE_URL}/addLoanRequest`,
-        {
-          method: "POST",
-          body: JSON.stringify({
-            name: name, 
-            email: email,
-            subcategories: subcategory,
-            maximumloan: maximumLoan,
-            loanperiod: loanPeriod
-          }),
-        }
-      );
-      console.log('status', postReq);
-      message.success("Loan Request Submitted");
-    } catch (error) {
-      console.error("Error fetching", error);
-      message.error("Failed to submit loan request");
-    } 
-  };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subcategory, setSubcategory] = useState("");
+  const [maximumLoan, setMaximumLoan] = useState("");
+  const [loanPeriod, setLoanPeriod] = useState("");
 
-  const handlePost = () => {
-    postLoanRequest();
-  };
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [loanRequests, setLoanRequests] = useState([
     {
       name: "John Doe",
@@ -258,21 +231,66 @@ function WeddingLoans() {
     }
   ]);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const showModal = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
-    setLoanRequests([
-      ...loanRequests,
-      { ...formData, status: 'Pending' } // Adding the 'status' to each loan request
-    ]);
-    setIsModalOpen(false);
-    setFormData({ name: '', email: '', subcategory: '', maxLoan: '', loanPeriod: '' }); // Reset form data
-  };
-
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+
+  const handlePost = async () => {
+
+    // if (!name || !email || !subcategory || !maximumLoan || !loanPeriod) {
+    //   message.error("Please fill all fields.");
+    //   return;
+    // }
+
+    // setIsLoading(true);
+
+    // try {
+    //   let postReq = await fetch(
+    //     `${BASE_URL}/addLoanRequest`,
+    //     {
+    //       method: "POST",
+    //       body: JSON.stringify({
+    //         name: name,
+    //         email: email,
+    //         subcategories: subcategory,
+    //         maximumloan: maximumLoan,
+    //         loanperiod: loanPeriod
+    //       }),
+    //     }
+    //   );
+    //   console.log('status', postReq);
+
+    //   // Adding the loan request to the table after submission
+      setLoanRequests([
+        ...loanRequests,
+        { name, email, subcategory, maxLoan: maximumLoan, loanPeriod, status: 'Pending' }
+      ]);
+
+    //   message.success("Loan Request Submitted");
+
+    //   // Close modal and reset form
+    //   setIsModalOpen(false);
+    //   setIsModalOpen(false);
+    //   setName('');
+    //   setEmail('');
+    //   setSubcategory('');
+    //   setMaximumLoan('');
+    //   setLoanPeriod('');
+    //   setFormData({ name: '', email: '', subcategory: '', maxLoan: '', loanPeriod: '' });
+    // } catch (error) {
+    //   console.error("Error fetching", error);
+    //   message.error("Failed to submit loan request");
+    // } finally {
+    //   setIsLoading(false);
+    // }
+
+    message.error("Loan Request Submitted")
   };
 
   const columns = [
@@ -307,7 +325,7 @@ function WeddingLoans() {
         </div>
 
         {/* Modal for loan application */}
-        <Modal title="Wedding Loan" onCancel={handleCancel} open={isModalOpen} onOk={handleOk} footer={null}>
+        <Modal title="Wedding Loan" onCancel={handleCancel} open={isModalOpen} footer={null}>
           <div className="flex gap-3 pt-5 justify-between">
             <input
               name="name"
@@ -359,7 +377,20 @@ function WeddingLoans() {
             />
           </div>
           <div className="pt-5">
-            <button onClick={handlePost} className="cursor-pointer bg-blue-600 text-white w-full rounded-md py-2">Submit</button>
+            {/* {isLoading
+              ?(
+                <button onClick={handlePost} className="cursor-pointer font-semibold bg-white border border-gray-300 w-full rounded-md py-2">
+                  <Spin/>
+                </button>
+              )
+              :(
+              <button onClick={handlePost} className="cursor-pointer font-semibold bg-blue-600 text-white w-full rounded-md py-2">
+                Submit 
+              </button>
+              )} */}
+              <button onClick={handlePost} className="cursor-pointer font-semibold bg-blue-600 text-white w-full rounded-md py-2">
+                Submit 
+              </button>
           </div>
         </Modal>
       </UserLayout>

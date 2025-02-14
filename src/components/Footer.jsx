@@ -4,7 +4,7 @@ import saylanilogo from "../assets/Images/saylanilogo.png"
 function Footer(){
     return(
       <>
-        <footer className="mt-24 border-t bg-white border-gray-300 text-gray-800 body-font">
+        <footer className="mt-14 border-t bg-white border-gray-300 text-gray-800 body-font">
             <div className="contentDiv px-20 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
               
               <div className="w-64 flex-shrink-0 md:mx-0 md:text-left">
