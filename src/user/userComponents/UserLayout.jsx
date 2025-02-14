@@ -74,9 +74,9 @@ const UserLayout = ({ children }) => {
         >
             {
             collapsed 
-            ? "SMA" 
+            ? <p className="text-green-600 font-bold">SMA</p>
             : <img width={'180px'} src={saylanilogo} alt="Logo"/>
-        }
+           }
         </div>
         <Menu
           theme="light"

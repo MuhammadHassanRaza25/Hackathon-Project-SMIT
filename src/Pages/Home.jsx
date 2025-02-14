@@ -8,20 +8,15 @@ function Home(){
 
     return(
         <>
-           {/* Header */}
-            <Header/>
+             <Header/>
             
-           {/* Hero Section */}
-            <HeroSection/>
+             <HeroSection/>
              
-           {/* Loan Calculator */}
              <LoanCalculator/>
 
-            {/* FAQs */}
              <FAQsSections/>
 
-            {/* Footer */}
-            <Footer/>
+             <Footer/>
         </>
     )
 }

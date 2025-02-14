@@ -72,7 +72,7 @@ function LoanCalculator() {
   };
 
   return (
-    <div className="py-16 bg-gray-100">
+    <div className="py-16 bg-gray-50">
        <div className="lg:w-[60vw] w-[80vw] mx-auto mt-10 mb-10">
             <h2 className="shadow lg:text-3xl text-2xl text-white bg-blue-500 font-bold text-center py-3 mb-8 rounded-lg">
               Loan Calculator

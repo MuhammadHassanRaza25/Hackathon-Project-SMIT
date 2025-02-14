@@ -290,7 +290,8 @@ function WeddingLoans() {
     //   setIsLoading(false);
     // }
 
-    message.error("Loan Request Submitted")
+    message.success("Loan Request Submitted")
+    setIsModalOpen(false)
   };
 
   const columns = [
